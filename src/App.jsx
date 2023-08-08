@@ -59,7 +59,7 @@ function App() {
           onChange={(e) => setInput(e.target.value)}
           className="mbInput"
           type="text"
-          placeholder="Add Todo"
+          placeholder="Добавить задачу"
         />
         <button className="bci" disabled={input === ""}>
           Добавить
