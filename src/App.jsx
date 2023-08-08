@@ -16,6 +16,10 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
 
+  const todosFalse = todos.filter(function (item) {
+    return item.completed === true;
+  });
+
   const createTodo = async (e) => {
     e.preventDefault(e);
     await addDoc(collection(db, "todos"), {
@@ -48,8 +52,8 @@ function App() {
   };
 
   return (
-    <div className="">
-      <form onSubmit={createTodo} className="">
+    <>
+      <form onSubmit={createTodo}>
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
@@ -65,7 +69,10 @@ function App() {
       {todos.length < 1 ? (
         <p>Нет задач</p>
       ) : (
-        <p>{`Количество задач: ${todos.length}`}</p>
+        <div className="list-counts">
+          <p>{`Количество задач: ${todos.length}`}</p>
+          <p>{`Количество решённых задач: ${todosFalse.length}`}</p>
+        </div>
       )}
       <ul>
         {todos.map((todo, index) => (
@@ -77,7 +84,7 @@ function App() {
           />
         ))}
       </ul>
-    </div>
+    </>
   );
 }
 

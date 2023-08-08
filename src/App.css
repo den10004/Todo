@@ -103,12 +103,6 @@ p {
   color: #000;
 }
 
-p:hover {
-  margin: 0;
-  font-weight: bold;
-  cursor: pointer;
-}
-
 .completed {
   color: black;
   text-decoration: line-through;
@@ -160,4 +154,13 @@ ul {
 li {
   color: black;
   list-style-type: none;
+}
+
+.list-counts {
+  display: flex;
+  margin: 10px auto 10px auto;
+}
+
+.list-counts > p {
+  margin: 0 auto;
 }
