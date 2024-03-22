@@ -54,7 +54,7 @@ input {
     flex-direction: column;
   }
   .mbInput {
-    margin: 0 0px 10px 0;
+    margin: 0 10px 10px 0;
   }
   .bci {
     margin: 0 auto;
@@ -73,6 +73,7 @@ button {
   transition: 0.2s;
   cursor: pointer;
   font-family: "Roboto", sans-serif;
+  padding: 0 5px 0 5px;
 }
 
 button:disabled,

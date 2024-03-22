@@ -1,12 +1,9 @@
 import { convertDate } from "../utils/convertData";
 
-// eslint-disable-next-line react/prop-types
 const Todo = ({ todo, toggleComplete, deleteTodo }) => {
-  // eslint-disable-next-line react/prop-types
   let dataTransform = `${convertDate(new Date(todo.data.toDate()))}`;
 
   return (
-    // eslint-disable-next-line react/prop-types
     <li className="card">
       <div className="card__wrapper">
         <div className={todo.completed ? "completed" : "not"}>
@@ -14,13 +11,11 @@ const Todo = ({ todo, toggleComplete, deleteTodo }) => {
             <input
               onChange={() => toggleComplete(todo)}
               type="checkbox"
-              // eslint-disable-next-line react/prop-types
               checked={todo.completed ? "checked" : ""}
             />
 
             <p
               onClick={() => toggleComplete(todo)}
-              // eslint-disable-next-line react/prop-types
               className={todo.completed ? "" : ""}
             >
               {todo.text}

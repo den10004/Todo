@@ -6,5 +6,5 @@ export function convertDate(date) {
   let year = date.getFullYear();
   let hours = date.getHours();
   let minutes = date.getMinutes();
-  return hours + ":" + minutes + "__" + day + "." + month + "." + year;
+  return hours + ":" + minutes + " " + day + "." + month + "." + year;
 }
