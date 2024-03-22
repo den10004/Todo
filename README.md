@@ -2,7 +2,7 @@
 
 ## Используемые технологии: React/firebase
 
-[Деплой](https://todo-psi-seven.vercel.app/).
+[Деплой](https://todo-git-main-denis-sergeev-85.vercel.app/).
 
 #### v. 1.2.4
 
